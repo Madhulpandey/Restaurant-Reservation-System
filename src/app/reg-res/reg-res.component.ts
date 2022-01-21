@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Restaurant } from '../model/restaurant';
+import { ResAuthService } from '../res-auth.service';
 
 @Component({
   selector: 'app-reg-res',
@@ -7,11 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegResComponent implements OnInit {
 
-  constructor() { }
+  rest:Restaurant=new Restaurant
+  constructor(private authRes:ResAuthService) { }
 
   ngOnInit(): void {
   }
-  register(){
-    
+  registerRest(){
+    this.authRes.registerRestaurant(this.rest)
   }
 }

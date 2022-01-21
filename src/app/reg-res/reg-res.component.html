@@ -1,2 +1,8 @@
 <p>reg-res works!</p>
-<input type="button" (click)="register()" value="Register">
+Name:<input type="text" [(ngModel)]="rest.resName"><br>
+Email:<input type="text" [(ngModel)]="rest.resEmail"><br>
+Password:<input type="text" [(ngModel)]="rest.resPwd"><br>
+Area:<input type="text" [(ngModel)]="rest.resArea"><br>
+Type:<input type="text" [(ngModel)]="rest.resType"><br>
+
+<input type="button" value="Register" (click)="registerRest()">

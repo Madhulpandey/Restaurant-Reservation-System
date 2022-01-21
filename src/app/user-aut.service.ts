@@ -12,7 +12,7 @@ export class UserAutService {
   // password:string
   // address:string
   users:User[]=[]
-  signedInUser:User=new User;
+  signedInUser:User={firstName:"",lastName:"",address:"",email:"lol",password:""};
   constructor() {  }
   register(u:User){
     this.users.push(u)  
@@ -22,7 +22,7 @@ export class UserAutService {
     let x=0
     for(x=0;x<this.users.length;x++){
       if(this.users[x].email==e && this.users[x].password==p){
-        alert("logged in")
+        //alert("logged in")
         this.signedInUser=this.users[x]
       }
     }

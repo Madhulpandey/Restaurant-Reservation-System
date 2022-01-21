@@ -2,4 +2,7 @@
 ENTER EMAIL:<input type="text" [(ngModel)]="mail"><br>
 ENTER PWD:<input type="text" [(ngModel)]="pwd"><br>
 
+Resturant:<input type="radio" name="selection" [(ngModel)]="selec" value="Res">
+User:<input type="radio" name="selection" [(ngModel)]="selec" value="user">
+
 <input type="button" (click)="login()" value="login">

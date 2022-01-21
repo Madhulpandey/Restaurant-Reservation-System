@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ResAuthService } from '../res-auth.service';
 import { UserAutService } from '../user-aut.service';
 
 @Component({
@@ -9,15 +10,29 @@ import { UserAutService } from '../user-aut.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private auth:UserAutService,private router:Router) { }
+  constructor(private uAuth:UserAutService,private router:Router,private rAuth:ResAuthService) { }
   mail:string=""
   pwd:string=""
+  selec:any=""
 
   ngOnInit(): void {
   }
   login(){
-    this.auth.login(this.mail,this.pwd)
-    //this.router.navigateByUrl("/userHP")
+    //console.log(this.selec);
+    if(this.selec=="user"){
+      //console.log(this.auth.signedInUser);      
+      this.uAuth.login(this.mail,this.pwd)
+      if(this.uAuth.signedInUser.email==this.mail){
+        this.router.navigateByUrl("/userHP")
+      }      
+    }else{
+      this.rAuth.logRestaurant(this.mail,this.pwd)
+      if(this.rAuth.loggedRest.resEmail==this.mail){
+        this.router.navigateByUrl("/resHP")
+      }
+    }
+    
+    
   }
 
 }
