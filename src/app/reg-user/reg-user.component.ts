@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../model/user';
+import { Router } from '@angular/router';
+import { UserAutService } from '../user-aut.service';
 
 @Component({
   selector: 'app-reg-user',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegUserComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private auth:UserAutService) { }
+  user:User=new User
+  repass:string=""
   ngOnInit(): void {
+    
+  }
+  register(){
+    this.auth.register(this.user)
   }
 
 }
