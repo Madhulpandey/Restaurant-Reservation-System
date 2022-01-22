@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Restaurant } from '../model/restaurant';
+import { ResAuthService } from '../res-auth.service';
 
 @Component({
   selector: 'app-user-home-page',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserHomePageComponent implements OnInit {
 
-  constructor() { }
+  restaurants:Restaurant[]=[];
+  constructor(private resAuth:ResAuthService) { 
+    this.restaurants=this.resAuth.restaurants
+  }
 
   ngOnInit(): void {
+  }
+  reserve(){
+    
   }
 
 }

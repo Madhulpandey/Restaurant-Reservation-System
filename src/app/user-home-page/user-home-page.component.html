@@ -1,1 +1,21 @@
 <p>user-home-page works!</p>
+<table class="table table-bordered">
+    <tr>
+    <th>Name</th>
+    <th>Area</th>
+    <th>Type</th>
+    <th>Reservation</th>
+    </tr>
+
+    <tr *ngFor="let r of restaurants">
+        <td>{{r.resName}}</td>
+        <td>{{r.resArea}}</td>
+        <td>{{r.resType}}</td>
+        <td><input type="button" value=reserve (click)="reserve()"></td>
+    </tr>
+</table>
+<!-- resName:string 
+    resEmail:string
+    resPwd:string
+    resArea:string
+    resType:string -->
