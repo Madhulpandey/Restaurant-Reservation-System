@@ -4,8 +4,10 @@ import { User } from "./user";
 export class Reservation {
     user:User
     restaurant:Restaurant
+    date:Date
     constructor(){
         this.user=new User
         this.restaurant=new Restaurant
+        this.date=new Date
     }
 }

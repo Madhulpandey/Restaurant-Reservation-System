@@ -1,9 +1,10 @@
-<p>user-home-page works!</p>
+
 <table class="table table-bordered">
     <tr>
     <th>Name</th>
     <th>Area</th>
     <th>Type</th>
+    <th>Date</th>
     <th>Reservation</th>
     </tr>
 
@@ -11,6 +12,8 @@
         <td>{{r.resName}}</td>
         <td>{{r.resArea}}</td>
         <td>{{r.resType}}</td>
-        <td><input type="button" value=reserve (click)="reserve(r)"></td>
+        <td><input type="date" [(ngModel)]="res.date" ></td>
+        <td><input type="button" value=reserve (click)="reserve(r)" class="btn btn-basic"></td>
+        
     </tr>
 </table>

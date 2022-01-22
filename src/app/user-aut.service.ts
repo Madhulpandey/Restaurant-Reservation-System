@@ -5,7 +5,7 @@ import { User } from './model/user';
   providedIn: 'root'
 })
 export class UserAutService {
-  users:User[]=[]
+  users:User[]=[{firstName:"test",lastName:"test",address:"test",email:"te@st",password:"test"}]
   signedInUser:User={firstName:"",lastName:"",address:"",email:"lol",password:""};
   constructor() {  }
   register(u:User){

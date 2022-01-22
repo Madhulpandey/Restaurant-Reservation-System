@@ -4,11 +4,29 @@
       max-width: 500px;
       margin: auto;
     }
-    </style>
+</style>
 <div class="content">
-<a routerLink="/regUser">REGISTER USER</a><br>
-<a routerLink="/regRes">REGISTER RESTAURANT</a><br>
-<a routerLink="/login">LOGIN</a><br>
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+    <ul class="navbar-nav">
 
+        <li class="nav-item">
+            <!-- <a class="nav-link" href="#">Link</a> -->
+            <a class="nav-link" routerLink="">HOME</a><br>
+        </li>
+      <li class="nav-item active">
+        <!-- <a class="nav-link" href="#">Active</a> -->
+        <a class="nav-link" routerLink="/regUser">REGISTER USER</a><br>
+      </li>
+      <li class="nav-item">
+        <!-- <a class="nav-link" href="#">Link</a> -->
+        <a class="nav-link" routerLink="/regRes">REGISTER RESTAURANT</a><br>
+      </li>
+      <li class="nav-item">
+        <!-- <a class="nav-link" href="#">Link</a> -->
+        <a class="nav-link" routerLink="/login">LOGIN</a><br>
+      </li>
+      
+    </ul>
+  </nav>
     <router-outlet> </router-outlet>
 </div>

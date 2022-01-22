@@ -10,8 +10,9 @@ export class ReservDBService {
 
   reservations:Reservation[]=[]
   constructor() { }
-  makeReservaion(u:User,res:Restaurant){
+  // makeReservaion(u:User,res:Restaurant ,d:Date){
+    makeReservaion(r:Reservation){
     console.log("Reservation Made")
-    this.reservations.push({user:u , restaurant:res})
+    this.reservations.push(r)
   }
 }
