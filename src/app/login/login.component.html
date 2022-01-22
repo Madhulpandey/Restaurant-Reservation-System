@@ -1,8 +1,38 @@
-<p>login works!</p>
-ENTER EMAIL:<input type="text" [(ngModel)]="mail"><br>
-ENTER PWD:<input type="text" [(ngModel)]="pwd"><br>
 
-Resturant:<input type="radio" name="selection" [(ngModel)]="selec" value="Res">
-User:<input type="radio" name="selection" [(ngModel)]="selec" value="user">
+<!-- ENTER EMAIL:<input type="text" [(ngModel)]=""><br><br> -->
+<!-- ENTER PWD:<input type="text" [(ngModel)]="pwd"><br><br> -->
+<form class="was-validated"> 
+<div class="form-group">
+    <label for="email">Email address:</label>
+    <input name="mail" type="email" class="form-control" [(ngModel)]="mail" placeholder="Enter email" id="email">
+</div>
+<div class="form-group">
+    <label for="Password">Password:</label>
+    <input name="mail" type="password" class="form-control" [(ngModel)]="pwd" placeholder="Enter Password" id="pwd">
+</div>
 
-<input type="button" (click)="login()" value="login">
+<!-- <div class="form-group">
+    <label for="Re-Password">Re-Enter Password:</label>
+    <input name="mail" type="password" class="form-control" placeholder="Re-enter Password" id="rpwd">
+</div> -->
+
+<!-- Resturant:<input class="radio-inline" type="radio" name="selection" [(ngModel)]="selec" value="Res">
+User:<input class="radio-inline" type="radio" name="selection" [(ngModel)]="selec" value="user">
+<br><br> -->
+<br>
+<label>Select Type:</label>
+<div class="custom-control custom-radio custom-control-inline">
+    <input type="radio" name="selection" class="custom-control-input" [(ngModel)]="selec" value="user">
+    <label class="custom-control-label" for="customRadioInline1">User</label>
+  </div>
+
+  <div class="custom-control custom-radio custom-control-inline">
+    <input type="radio"  name="selection" class="custom-control-input" [(ngModel)]="selec" value="Res">
+    <label class="custom-control-label" for="customRadioInline2">Resturant</label>
+  </div>
+    
+  <br>
+  <input type="button" (click)="login()" value="login" class="btn btn-primary">
+</form>
+
+

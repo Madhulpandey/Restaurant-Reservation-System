@@ -1,8 +1,41 @@
 <p>reg-res works!</p>
-Name:<input type="text" [(ngModel)]="rest.resName"><br>
-Email:<input type="text" [(ngModel)]="rest.resEmail"><br>
-Password:<input type="text" [(ngModel)]="rest.resPwd"><br>
-Area:<input type="text" [(ngModel)]="rest.resArea"><br>
-Type:<input type="text" [(ngModel)]="rest.resType"><br>
+<form class="was-validated">
 
-<input type="button" value="Register" (click)="registerRest()">
+<!-- Name:<input type="text" [(ngModel)]="rest.resName"><br><br> -->
+<div class="form-group">
+    <label for="First Name">Name:</label>
+    <input name="resname" type="text" class="form-control" [(ngModel)]="rest.resName" placeholder="Enter Restaurant Name" id="resname">
+</div>
+
+
+<!-- Email:<input type="text" [(ngModel)]="rest.resEmail"><br><br> -->
+<div class="form-group">
+    <label for="Email">Enter Email:</label>
+    <input name="resmail" type="email" class="form-control" [(ngModel)]="rest.resEmail" placeholder="Enter Owner's Email" id="email">
+</div>
+
+
+<!-- Password:<input type="text" [(ngModel)]="rest.resPwd"><br><br> -->
+<div class="form-group">
+    <label for="pwd">Enter Password:</label>
+    <input name="pwd" type="password" class="form-control" [(ngModel)]="rest.resPwd" placeholder="Enter Password" id="pwd">
+</div>
+
+
+<!-- Area:<input type="text" [(ngModel)]="rest.resArea"><br><br> -->
+<div class="form-group">
+    <label for="area">Area:</label>
+    <input name="area" type="text" class="form-control" [(ngModel)]="rest.resArea" placeholder="Enter Area" id="resarea">
+</div>
+
+
+<!-- Type:<input type="text" [(ngModel)]="rest.resType"><br><br> -->
+<div class="form-group">
+    <label for="cusine">Cuisine:</label>
+    <input name="cusi" type="text" class="form-control" [(ngModel)]="rest.resType" placeholder="Enter Cuisine" id="cusi">
+</div>
+
+
+<br>
+<input type="button" value="Register" (click)="registerRest()" class="btn btn-primary">
+</form>

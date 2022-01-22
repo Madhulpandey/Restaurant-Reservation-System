@@ -14,11 +14,12 @@ export class LoginComponent implements OnInit {
   mail:string=""
   pwd:string=""
   selec:any=""
+  rePwd:string=""
 
   ngOnInit(): void {
   }
   login(){
-    //console.log(this.selec);
+    console.log(this.selec);
     if(this.selec=="user"){
       //console.log(this.auth.signedInUser);      
       this.uAuth.login(this.mail,this.pwd)

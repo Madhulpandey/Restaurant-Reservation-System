@@ -10,7 +10,7 @@ import { RegResComponent } from './reg-res/reg-res.component';
 import { LoginComponent } from './login/login.component';
 import { UserHomePageComponent } from './user-home-page/user-home-page.component';
 import { ResHomePageComponent } from './res-home-page/res-home-page.component';
-import { ReservationComponent } from './reservation/reservation.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +20,6 @@ import { ReservationComponent } from './reservation/reservation.component';
     LoginComponent,
     UserHomePageComponent,
     ResHomePageComponent,
-    ReservationComponent
   ],
   imports: [
     BrowserModule,

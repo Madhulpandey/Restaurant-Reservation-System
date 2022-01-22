@@ -1,8 +1,41 @@
 <p>reg-user works!</p>
-First Name:<input type="text" [(ngModel)]="user.firstName"><br>
-Last Name:<input type="text" [(ngModel)]="user.lastName"><br>
-Email:<input type="text" [(ngModel)]="user.email"><br>
-Address:<input type="text" [(ngModel)]="user.address"><br>
-Password:<input type="text" [(ngModel)]="user.password"><br>
-Repeat password:<input type="text" [(ngModel)]="repass"><br>
-<input type="button" value="Register" (click)="register()">
+<form class="was-validated">
+<div class="form-group">
+    <label for="First Name">First Name:</label>
+    <input name="fname" type="text" class="form-control" [(ngModel)]="user.firstName" placeholder="Enter FirstName" id="fname">
+</div>
+
+
+<!-- Last Name:<input type="text" [(ngModel)]="user.lastName"><br><br> -->
+<div class="form-group">
+    <label for="First Name">Last Name:</label>
+    <input name="lname" type="text" class="form-control" [(ngModel)]="user.lastName" placeholder="Enter LastName" id="lname">
+</div>
+
+<!-- Email:<input type="text" [(ngModel)]="user.email"><br><br> -->
+<div class="form-group">
+    <label for="email">Enter Email:</label>
+    <input name="email" type="email" class="form-control" [(ngModel)]="user.email" placeholder="Enter Email" id="email">
+</div>
+
+<!-- Address:<input type="text" [(ngModel)]="user.address"><br><br> -->
+<div class="form-group">
+    <label for="address">Address:</label>
+    <input name="add" type="text" class="form-control" [(ngModel)]="user.address" placeholder="Enter address" id="add">
+</div>
+
+<!-- Password:<input type="text" [(ngModel)]="user.password"><br><br> -->
+<div class="form-group">
+    <label for="pwd">Password:</label>
+    <input name="fname" type="password" class="form-control" [(ngModel)]="user.password" placeholder="Enter Password" id="pwd">
+</div>
+
+<!-- Repeat password:<input type="text" [(ngModel)]="repass"><br><br> -->
+<div class="form-group">
+    <label for="rpwd">Re-enter Password:</label>
+    <input name="repwd" type="password" class="form-control" [(ngModel)]="repass" placeholder="Re-enter Password" id="rpwd">
+</div>
+
+<br>
+<input type="button" value="Register" (click)="register()" class="btn btn-primary">
+</form>

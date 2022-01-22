@@ -5,12 +5,6 @@ import { User } from './model/user';
   providedIn: 'root'
 })
 export class UserAutService {
-
-  //firstName:string
-  // lastName:string
-  // email:string
-  // password:string
-  // address:string
   users:User[]=[]
   signedInUser:User={firstName:"",lastName:"",address:"",email:"lol",password:""};
   constructor() {  }
