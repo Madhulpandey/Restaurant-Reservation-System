@@ -13,19 +13,21 @@ import { UserAutService } from '../user-aut.service';
 export class UserHomePageComponent implements OnInit {
 
   restaurants:Restaurant[]=[];
-  //date:Date=new Date
+  date:Date=new Date
   res:Reservation=new Reservation
   constructor(private userAuth:UserAutService,private resAuth:ResAuthService,private reserveDB:ReservDBService) { 
     this.restaurants=this.resAuth.restaurants
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void {  
   }
   reserve(r:Restaurant){
     this.res.restaurant=r
+    this.res.date=this.date
     this.res.user=this.userAuth.signedInUser
     this.reserveDB.makeReservaion(this.res)
     console.log(this.reserveDB.reservations);
+    this.res=new Reservation
   
   }
 

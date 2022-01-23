@@ -5,7 +5,13 @@
       margin: auto;
     }
 </style>
-<div class="content">
+<style>
+  .cont {
+    max-width: 600px;
+    margin: auto;
+  }
+</style>
+<div class="cont">
 <nav class="navbar navbar-expand-sm bg-light navbar-light">
     <ul class="navbar-nav">
 
@@ -28,5 +34,7 @@
       
     </ul>
   </nav>
-    <router-outlet> </router-outlet>
+</div>
+  <div class="content">
+  <router-outlet> </router-outlet>
 </div>
