@@ -4,11 +4,11 @@
 <form class="was-validated"> 
 <div class="form-group">
     <label for="email">Email address:</label>
-    <input name="mail" type="email" class="form-control" [(ngModel)]="mail" placeholder="Enter email" id="email">
+    <input name="mail" type="email" class="form-control" [(ngModel)]="mail" placeholder="Enter email" id="email" required>
 </div>
 <div class="form-group">
     <label for="Password">Password:</label>
-    <input name="mail" type="password" class="form-control" [(ngModel)]="pwd" placeholder="Enter Password" id="pwd">
+    <input name="mail" type="password" class="form-control" [(ngModel)]="pwd" placeholder="Enter Password" id="pwd" minlength="6" required>
 </div>
 
 <!-- <div class="form-group">

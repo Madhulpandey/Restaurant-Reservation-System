@@ -3,8 +3,7 @@
     <tr>
     <th>Name</th>
     <th>Area</th>
-    <th>Type</th>
-    <th>Date</th>
+    <th>Cuisine</th>
     <th>Reservation</th>
     </tr>
 
@@ -13,9 +12,9 @@
         <td>{{r.resArea}}</td>
         <td>{{r.resType}}</td>
         <!-- <td><input type="date" [(ngModel)]="res.date" ></td> -->
-        <td><input type="button" value=reserve (click)="reserve(r)" class="btn btn-basic"></td>
+        <td><input type="button" value=reserve (click)="reserve(r)" class="btn btn-primary"></td>
         
     </tr>
 </table>
 <br>
-<input type="date" [(ngModel)]="date" >
+<input type="date" [(ngModel)]="date" min="2022-01-24">

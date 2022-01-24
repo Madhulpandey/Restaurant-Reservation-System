@@ -10,11 +10,16 @@ import { ResAuthService } from '../res-auth.service';
 export class RegResComponent implements OnInit {
 
   rest:Restaurant=new Restaurant
+  repass:string=""
   constructor(private authRes:ResAuthService) { }
 
   ngOnInit(): void {
   }
   registerRest(){
-    this.authRes.registerRestaurant(this.rest)
+    if(this.repass==this.rest.resPwd){
+      this.authRes.registerRestaurant(this.rest)
+    }else{
+      alert("Password Mismatch")
+    }
   }
 }

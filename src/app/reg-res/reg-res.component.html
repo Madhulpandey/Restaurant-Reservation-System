@@ -2,28 +2,33 @@
 
 <div class="form-group">
     <label for="First Name">Name:</label>
-    <input name="resname" type="text" class="form-control" [(ngModel)]="rest.resName" placeholder="Enter Restaurant Name" id="resname">
+    <input name="resname" type="text" class="form-control" [(ngModel)]="rest.resName" placeholder="Enter Restaurant Name" id="resname" required pattern="[A-Za-z]">
 </div>
 
 <div class="form-group">
     <label for="Email">Enter Email:</label>
-    <input name="resmail" type="email" class="form-control" [(ngModel)]="rest.resEmail" placeholder="Enter Owner's Email" id="email">
+    <input name="resmail" type="email" class="form-control" [(ngModel)]="rest.resEmail" placeholder="Enter Owner's Email" id="email" required>
 </div>
 
 
 <div class="form-group">
     <label for="pwd">Enter Password:</label>
-    <input name="pwd" type="password" class="form-control" [(ngModel)]="rest.resPwd" placeholder="Enter Password" id="pwd">
+    <input name="pwd" type="password" class="form-control" [(ngModel)]="rest.resPwd" placeholder="Enter Password" id="pwd" minlength="6" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
+</div>
+
+<div class="form-group">
+    <label for="pwd">Re-Enter Password:</label>
+    <input name="pwd" type="password" class="form-control" [(ngModel)]="repass" placeholder="Re-Enter Password" id="pwd" minlength="6" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
 </div>
 
 <div class="form-group">
     <label for="area">Area:</label>
-    <input name="area" type="text" class="form-control" [(ngModel)]="rest.resArea" placeholder="Enter Area" id="resarea">
+    <input name="area" type="text" class="form-control" [(ngModel)]="rest.resArea" placeholder="Enter Area" id="resarea" required pattern="[A-Za-z]">
 </div>
 
 <div class="form-group">
     <label for="cusine">Cuisine:</label>
-    <input name="cusi" type="text" class="form-control" [(ngModel)]="rest.resType" placeholder="Enter Cuisine" id="cusi">
+    <input name="cusi" type="text" class="form-control" [(ngModel)]="rest.resType" placeholder="Enter Cuisine" id="cusi" pattern="[A-Za-z]">
 </div>
 
 <br>

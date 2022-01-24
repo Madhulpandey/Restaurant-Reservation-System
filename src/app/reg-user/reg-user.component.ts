@@ -17,7 +17,12 @@ export class RegUserComponent implements OnInit {
     
   }
   register(){
-    this.auth.register(this.user)
+    if(this.repass==this.user.password){
+      this.auth.register(this.user)
+    }else{
+      alert("password mismatch")
+    }
+    
   }
 
 }
