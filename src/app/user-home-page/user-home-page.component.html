@@ -1,4 +1,30 @@
 
+<p align="right">
+<input type="button" value="Sign Out" class="btn btn-danger" style="margin: 5px;" (click)="quit()">
+</p>
+
+Current Reservations:<br>
+<table class="table table-bordered">
+    <tr>
+    <th>Name</th>
+    <th>Area</th>
+    <th>Cuisine</th>
+    <th>Date</th>
+    <th>Reservation</th>
+    </tr>
+
+    <tr *ngFor="let rese of reservations">
+        <td *ngIf="rese.user==user">{{rese.restaurant.resName}}</td>
+        <td *ngIf="rese.user==user">{{rese.restaurant.resArea}}</td>
+        <td *ngIf="rese.user==user">{{rese.restaurant.resType}}</td>
+        <td *ngIf="rese.user==user">{{rese.date}}</td>
+        <td *ngIf="rese.user==user"><input type="button" value="Cancel" (click)="cancel(rese)" class="btn btn-primary"></td>
+        
+    </tr>
+</table>
+<br>
+Available Restaurants:<br>
+
 <table class="table table-bordered">
     <tr>
     <th>Name</th>

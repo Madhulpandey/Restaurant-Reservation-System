@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Reservation } from '../model/reservation';
 import { User } from '../model/user';
 import { ResAuthService } from '../res-auth.service';
@@ -15,17 +16,20 @@ export class ResHomePageComponent implements OnInit {
   usersReserved:User[]=[]
   reservations:Reservation[]=[]
   logRes=this.restAuth.loggedRest
-  constructor(private restAuth:ResAuthService,private reserveAuth:ReservDBService,private userAuth:UserAutService) 
+  constructor(private router:Router,private restAuth:ResAuthService,private reserveAuth:ReservDBService,private userAuth:UserAutService) 
   { 
     this.reservations=this.reserveAuth.reservations
   }
 
   ngOnInit(): void {
-    // for(let x=0;x<this.reserveAuth.reservations.length;x--){
-    //   if(this.restAuth.loggedRest==this.reserveAuth.reservations[x].restaurant){
-    //     this.usersReserved.push(this.reserveAuth.reservations[x].user)
-    //   }
-    // }
+  }
+  remove(r:Reservation){
+    var ind=this.reserveAuth.reservations.indexOf(r)
+    this.reserveAuth.reservations.splice(ind,1)
+    
+  }
+  quit(){
+    this.router.navigateByUrl("/login")
   }
 
 }

@@ -22,4 +22,6 @@ export class RegResComponent implements OnInit {
       alert("Password Mismatch")
     }
   }
+  
+
 }

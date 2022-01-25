@@ -1,4 +1,7 @@
 
+<p align="right">
+<input type="button" value="Sign Out" class="btn btn-danger" style="margin: 5px;" (click)="quit()">
+</p>
 <table class="table table-bordered">
     <tr>
     <th>First Name</th>
@@ -12,12 +15,8 @@
         <td *ngIf="r.restaurant==logRes">{{r.user.lastName}}</td>
         <td *ngIf="r.restaurant==logRes">{{r.user.email}}</td>
         <td *ngIf="r.restaurant==logRes">{{r.date}}</td>
-        <!-- <td><input type="date" [(ngModel)]="res.date" ></td> -->
-        <!-- <td><input type="button" value=reserve (click)="reserve(r)" class="btn btn-basic"></td> -->
-        <!-- <div *ngFor="let item of items">
-            <button *ngIf="(item.data.type == 1)">{{item.data.name}}</button>
-        </div> -->
+        <td *ngIf="r.restaurant==logRes"><input type="button" (click)="remove(r)" value="Remove" class="btn btn-primary"> </td>
     </tr>
 </table>
 <br>
-<!-- <input type="date" [(ngModel)]="date" > -->
+

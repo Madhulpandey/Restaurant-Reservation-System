@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
       //console.log(this.auth.signedInUser);      
       this.uAuth.login(this.mail,this.pwd)
       if(this.uAuth.signedInUser.email==this.mail){
-        this.router.navigateByUrl("/userHP")
+       this.router.navigateByUrl("/userHP")
       }      
     }else{
       this.rAuth.logRestaurant(this.mail,this.pwd)
