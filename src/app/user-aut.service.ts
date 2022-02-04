@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from './model/user';
 
@@ -5,12 +6,15 @@ import { User } from './model/user';
   providedIn: 'root'
 })
 export class UserAutService {
-  users:User[]=[{firstName:"test",lastName:"test",address:"test",email:"te@st",password:"Test1234"}]
-  signedInUser:User={firstName:"",lastName:"",address:"",email:"lol",password:""};
-  constructor() {  }
+  users:User[]=[]
+  signedInUser:User={firstName:"",lastName:"",address:"",email:"lol",password:"",securityAnswer:"",securityQuestion:""};
+  constructor(private http:HttpClient) {  }
+  
+
   register(u:User){
     this.users.push(u)  
     console.log(this.users); 
+    //this.http.post('http://localhost:3000/customer/',u)
   }
   login(e:string,p:string){
     let x=0
@@ -18,7 +22,7 @@ export class UserAutService {
       if(this.users[x].email==e && this.users[x].password==p){
         //alert("logged in")
         this.signedInUser=this.users[x]
-      }
+       }
     }
   }
 

@@ -1,5 +1,6 @@
 
 <form class="was-validated">
+    <label >REGISTER USER</label>
 <div class="form-group">
     <label for="First Name">First Name:</label>
     <input name="fname" type="text" class="form-control" [(ngModel)]="user.firstName" placeholder="Enter FirstName" id="fname" >
@@ -32,6 +33,20 @@
 <div class="form-group">
     <label for="rpwd">Re-enter Password:</label>
     <input name="repwd" type="password" class="form-control" [(ngModel)]="repass" placeholder="Re-enter Password" id="rpwd" minlength="6" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
+</div>
+
+
+<div class="form-group">
+    <label>Select Security Question</label><br>
+<select name="dog-names" id="dog-names" [(ngModel)]="user.securityQuestion">
+    <option value="Maiden Name">Mother's Maiden name</option>
+    <option value="Pet">First pet's Name</option>
+    <option value="birth">Place of birth</option>
+</select>
+</div>
+<br>
+<div class="form-group">
+    <input name="sec_answer" type="text" class="form-control" [(ngModel)]="user.securityAnswer" placeholder="Enter security answer" id="sec_ans" >
 </div>
 
 <br>

@@ -4,6 +4,8 @@ export class User {
     email:string
     password:string
     address:string
+    securityQuestion:string
+    securityAnswer:string
 
     constructor(){
         this.firstName=""
@@ -11,5 +13,8 @@ export class User {
         this.email=""
         this.password=""
         this.address=""
+        this.securityQuestion=""
+        this.securityAnswer=""
     }
+    
 }

@@ -18,6 +18,7 @@ export class RegResComponent implements OnInit {
   registerRest(){
     if(this.repass==this.rest.resPwd){
       this.authRes.registerRestaurant(this.rest)
+      this.rest=new Restaurant
     }else{
       alert("Password Mismatch")
     }

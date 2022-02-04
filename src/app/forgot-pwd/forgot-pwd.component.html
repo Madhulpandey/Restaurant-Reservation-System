@@ -1,0 +1,48 @@
+<p>forgot-pwd works!</p>
+<form class="was-validated"> 
+    <div class="form-group">
+        <label for="email">Email address:</label>
+        <input name="mail" type="email" class="form-control" [(ngModel)]="email" placeholder="Enter email" id="email" required>
+    </div>
+    
+    <label>Select Type:</label>
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" name="selection" class="custom-control-input" [(ngModel)]="selec" value="user">
+        <label class="custom-control-label" for="customRadioInline1">User</label>
+      </div>
+    
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio"  name="selection" class="custom-control-input" [(ngModel)]="selec" value="Res">
+        <label class="custom-control-label" for="customRadioInline2">Resturant</label>
+      </div>
+
+
+      <div class="form-group">
+        <label>Select Security Question</label><br>
+        <select name="dog-names" id="dog-names" [(ngModel)]="secQues">
+            <option value="Maiden Name">Mother's Maiden name</option>
+            <option value="Pet">First pet's Name</option>
+            <option value="birth">Place of birth</option>
+        </select>
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Enter Security Answer</label>
+            <input name="sec_answer" type="text" class="form-control" [(ngModel)]="secAnswer" placeholder="Enter security answer" id="sec_ans" >
+        </div>
+
+
+
+
+      <div class="form-group">
+        <label for="Password">Enter Password:</label>
+        <input name="mail" type="password" class="form-control" [(ngModel)]="pwd" placeholder="Enter Password" id="pwd" minlength="6" required>
+    </div>
+    <div class="form-group">
+        <label for="Password">Re-enter Password:</label>
+        <input name="mail" type="password" class="form-control" [(ngModel)]="repwd" placeholder="Enter Password" id="repwd" minlength="6" required>
+    </div>
+
+      <input type="button" (click)="changePwd()" value="Change Password" class="btn btn-primary">
+    </form>
+    

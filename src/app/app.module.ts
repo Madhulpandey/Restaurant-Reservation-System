@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
- import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +11,7 @@ import { RegResComponent } from './reg-res/reg-res.component';
 import { LoginComponent } from './login/login.component';
 import { UserHomePageComponent } from './user-home-page/user-home-page.component';
 import { ResHomePageComponent } from './res-home-page/res-home-page.component';
+import { ForgotPwdComponent } from './forgot-pwd/forgot-pwd.component';
 
 
 @NgModule({
@@ -20,11 +22,13 @@ import { ResHomePageComponent } from './res-home-page/res-home-page.component';
     LoginComponent,
     UserHomePageComponent,
     ResHomePageComponent,
+    ForgotPwdComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
